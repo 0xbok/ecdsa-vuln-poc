@@ -4,6 +4,8 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 contract CounterTest is Test {
+    // group order value of Secp256k1 curve
+    // https://github.com/bmancini55/bitcoin-ecc/blob/df048235cdc89c4dd9cd253310637061ed17f5e8/lib/Secp256k1.ts#L7
     bytes32 constant public groupOrder = 0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141;
     function setUp() public {
     }
