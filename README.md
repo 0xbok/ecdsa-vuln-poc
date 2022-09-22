@@ -4,7 +4,7 @@ Details: https://www.derpturkey.com/inherent-malleability-of-ecdsa-signatures
 From the article:
 > It allows anyone to modify the signature in a specific way without access to the private key and yet the signature remains perfectly valid!
 
-Go to `Counter.t.sol` to see how you can change the signature for Ethereum's Secp256k1 curve.
+Go to `SignVerifierTest.t.sol` to see how you can change the signature for Ethereum's Secp256k1 curve.
 Once someone signs a message and produces a signature, just using the signature, you can create another signature that is perfectly valid (that is `ecrecover` will tell you the original signer signed it).
 
 ## Steps to run
