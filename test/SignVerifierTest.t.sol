@@ -18,10 +18,16 @@ contract SignVerifierTest is Test {
         bytes32 s = 0x1643d14dbd6a6edc658f4b16699a585181a08dba4f6d16a9273e0e2cbed622da;
 
         bytes32 hash = 0x3ea2f1d0abf3fc66cf29eebb70cbd4e7fe762ef8a09bcc06c8edf641230afec0;
-        console.log(ecrecover(hash, 27, r, s));
 
+        // prints the address (signer)
+        console.log("original signer", ecrecover(hash, 27, r, s));
+
+        // we change the s value changing the signature, and we get the same address
         bytes32 s1 = bytes32(uint256(groupOrder)-uint256(s));
-        console.log(ecrecover(hash, 28, r, s1));
+        console.log("original signer with changed signature", ecrecover(hash, 28, r, s1));
+
+        // we changed the signature and show that it signed without knowing the private key
+        console.log("different signer without knowing their private key", ecrecover(hash, 27, r, s1));
     }
 
 }
