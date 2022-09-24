@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "eth-crypto": "^2.3.0"
+  }
+}
