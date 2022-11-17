@@ -1,6 +1,6 @@
-[profile.default]
-src = 'src'
-out = 'out'
-libs = ['lib']
+[profile.ch1]
+src = 'ch1_malleable'
+test = 'ch1_malleable'
+out = 'ch1_malleable/out'
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

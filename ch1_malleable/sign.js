@@ -1,10 +1,10 @@
-const EthCrypto = require("eth-crypto");
+import { createIdentity, hash, sign} from "eth-crypto";
 
-const signerIdentity = EthCrypto.createIdentity();
-const message = EthCrypto.hash.keccak256([
+const signerIdentity = createIdentity();
+const message = hash.keccak256([
 {type: "string",value: "Hello World!"}
 ]);
-const signature = EthCrypto.sign(signerIdentity.privateKey, message);
+const signature = sign(signerIdentity.privateKey, message);
 console.log(`hash: ${message}`);
 console.log(`signature: ${signature}`);
 console.log(`address: ${signerIdentity.address}`);
@@ -13,11 +13,14 @@ if (signature.length != 132) {
     throw "invalid sign, exit";
 }
 
+// remove leading 0x.
 const sign1 = signature.slice(2);
+
+// split signature into r,s,v values
 const r = sign1.slice(0, 64);
 const s = sign1.slice(64, 128);
 const v = sign1.slice(128);
 
 console.log("r", "0x"+r);
 console.log("s", "0x"+s);
-console.log("v", parseInt(v,16));
+console.log("v", parseInt(v,16)); // convert hex to integer

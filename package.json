@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "eth-crypto": "^2.3.0"
-  }
+    "eth-crypto": "^2.4.0",
+    "secp256k1": "^4.0.3"
+  },
+  "type": "module"
 }

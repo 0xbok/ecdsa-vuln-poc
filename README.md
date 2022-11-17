@@ -1,4 +1,16 @@
-# ECDSA signatures are malleable
+# ECDSA signature vulnerabilities
+
+This repository reproduces ECDSA vulnerabilities. I've been trying to replicate them, and thought it could be useful for others exploring this, especially since they used a lot in Ethereum.
+
+There's plenty of online material explaining different ECDSA related attacks. This repo contains different chapters focusing on one such attack. You might already be aware of best practices in smart contracts when dealing with ECDSA signatures, but here the goal is to show why these practices are recommended.
+
+- Chapter 1 - ECDSA signatures are malleable.
+- Chapter 2 - ECDSA signatures are not unique.
+- Chapter 3 - ECDSA signatures can reveal your private key if you use the same random number (aka nonce).
+
+Each chapter goes into some detail to demonstrate the vulnerability, directing you towards material if you want to read further.
+
+**Disclaimer: This list is not exhaustive. This code has bugs, do not use in production. I am not an expert of any kind.**
 
 Details: https://www.derpturkey.com/inherent-malleability-of-ecdsa-signatures.
 From the article:
