@@ -1,4 +1,4 @@
-import { createIdentity, hash, sign} from "eth-crypto";
+import { createIdentity, hash, sign, util } from "eth-crypto";
 
 const signerIdentity = createIdentity();
 const message = hash.keccak256([
@@ -14,7 +14,7 @@ if (signature.length != 132) {
 }
 
 // remove leading 0x.
-const sign1 = signature.slice(2);
+const sign1 = util.removeLeading0x(signature);
 
 // split signature into r,s,v values
 const r = sign1.slice(0, 64);

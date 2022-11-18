@@ -3,4 +3,14 @@ src = 'ch1_malleable'
 test = 'ch1_malleable'
 out = 'ch1_malleable/out'
 
+[profile.ch2]
+src = 'ch2_not_unique'
+test = 'ch2_not_unique'
+out = 'ch2_not_unique/out'
+
+[profile.ch3]
+src = 'ch3_reveal_private_key'
+test = 'ch3_reveal_private_key'
+out = 'ch3_reveal_private_key/out'
+
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

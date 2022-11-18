@@ -3,6 +3,7 @@ const { ecdsaSign } = pkg;
 import { hash as _hash, util } from "eth-crypto";
 
 // ecdsa sign using a nonce provided as an argument.
+// code modified from eth-crypto's sign.js to expose nonce argument.
 function sign(privateKey, hash, nonce) {
     hash = util.addLeading0x(hash);
     if (hash.length !== 66)
