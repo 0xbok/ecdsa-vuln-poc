@@ -1,6 +1,7 @@
 # Reusing nonce reveals your private key
 
-Source: https://billatnapier.medium.com/ecdsa-weakness-where-nonces-are-reused-2be63856a01a
+Source: https://billatnapier.medium.com/ecdsa-weakness-where-nonces-are-reused-2be63856a01a.
+
 As shown in previous chapter, ECDSA algorithm uses a nonce to generate a signature, and this complexity is hidden from the end user.
 
 Here we see that if the same nonce is used on different data, just by having the two signatures, anyone can extract the private key (and the nonce).

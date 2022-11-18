@@ -18,7 +18,7 @@ Each chapter goes into some detail to demonstrate the vulnerability, directing y
 This assumes familiarity with Javascript, Solidity and Foundry.
 
 1. Clone the repository.
-2. Install `yarn` if you haven't. Run `yarn` to install npm packages. The installed packages willb e used to generate keys and sign messages.
+2. Install `yarn` if you haven't. Run `yarn` to install npm packages. The installed packages will be used to generate keys and sign messages.
 3. [Install foundry](https://book.getfoundry.sh/getting-started/installation) if you haven't. Run `forge install`.
 4. For chapter 1, run `FOUNDRY_PROFILE=ch1 forge test`, and so on.
 
@@ -26,5 +26,3 @@ This assumes familiarity with Javascript, Solidity and Foundry.
 Each chapter demonstrates a different attack, and documents what can be done to be safe. Due to the use of Solidity, the recommendations provided are specifically applicable on smart contracts on Ethereum, but the general concept remains the same and hence may be applied outside of Ethereum too.
 
 **Disclaimer: This list is not exhaustive. This code has bugs (intended and unintended), do not use in production. I am not a cryptographer. I am not an expert of any kind.**
-
-Please note that just using this library won't protect you from all signature vulnerabilities.

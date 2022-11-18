@@ -5,9 +5,6 @@ import pkg1 from 'elliptic';
 const { ec: EC } = pkg1;
 const ec = new EC('secp256k1')
 const ecparams = ec.curve
-
-// Hack, we can not use bn.js@5, while elliptic uses bn.js@4
-// See https://github.com/indutny/elliptic/issues/191#issuecomment-569888758
 const BN = ecparams.n.constructor
 
 
@@ -49,18 +46,16 @@ const privateKey = "0xe8f2ae1b4e2932271ac9fab5dac2b0aa83498376e969c915b47863a85b
 const message1 = "0x62ba5d9a955135bd710cbe6cf9f35a15364ab928f278104c682912d096811a7d";
 const message2 = "0x7521d1cadbcfa91eec65aa16715b94ffc1c9654ba57ea2ef1a2127bca1127a84";
 
-// generating first signature.
 const nonce = _hash.keccak256("x");
+// generating two signature with the same nonce.
 const sig1 = sign(privateKey, message1, nonce);
 const sig2 = sign(privateKey, message2, nonce);
 
 // `privateKey` is never used until the end where we
-// match it with the receoverd private key.
+// match it with the recovered private key.
 const rsv1 = get_rsv(sig1);
 console.log("r1", util.addLeading0x(rsv1.r));
 console.log("s1", util.addLeading0x(rsv1.s));
-
-// generating a new signature with a different nonce.
 
 const rsv2 = get_rsv(sig2);
 
