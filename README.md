@@ -12,8 +12,6 @@ There's plenty of online material explaining different ECDSA related attacks. Th
 
 Each chapter goes into some detail to demonstrate the vulnerability, directing you towards material if you want to read further.
 
-**Disclaimer: This list is not exhaustive. This code has bugs (intended and unintended), do not use in production. I am not a cryptographer. I am not an expert of any kind.**
-
 ## Steps to run
 This assumes familiarity with Javascript, Solidity and Foundry.
 

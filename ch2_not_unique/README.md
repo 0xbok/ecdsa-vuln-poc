@@ -1,7 +1,7 @@
 # ECDSA signatures can be different for the same message
 Applying from last chapter, this chapter uses OpenZeppelin's ECDSA library for signature verification. However...
 
-ECDSA uses a random number (aka nonce) to generate a signature. Signature libraries hide this complexity from users, so we generally get the same signature when the private key signs a message multiple times.
+ECDSA uses a random number (aka nonce) to generate a signature. Read [Nakov's description](https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages#ecdsa-sign) to understand more. Signature libraries hide this complexity from users, so we generally get the same signature when the private key signs a message multiple times.
 
 This chapter shows how using different random numbers produces different signatures.
 
